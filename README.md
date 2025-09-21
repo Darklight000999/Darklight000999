@@ -1,10 +1,14 @@
-<!-- Cyber Security Professional Profile -->
+<!-- Cyber Security Animated Professional Profile -->
 
-<img src="https://i.ibb.co/2vY6nPt/YourBanner.png" alt="Banner" width="100%" />
+<!-- Matrix Animated Banner -->
+<p align="center">
+  <img src="https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif" width="100%" alt="Matrix Animation" />
+</p>
 
-<h1 align="center">⚡ Hi, I'm <span style="color:#00ff99;">Your Name</span> ⚡</h1>
-<h3 align="center">🔒 Cyber Security Specialist | 🛡️ Ethical Hacker | 💻 Software Engineer</h3>
-<h4 align="center">"Defending the digital frontier, one line of code at a time."</h4>
+<!-- Typing Animation -->
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&width=600&lines=🔒+Cyber+Security+Specialist;🛡️+Ethical+Hacker;⚡+Software+Engineer;🚀+Open+Source+Contributor" alt="Typing SVG" />
+</h1>
 
 ---
 
@@ -21,7 +25,7 @@
 
 ## 🛠️ Tech Arsenal:
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,cpp,js,html,css,react,nodejs,mongodb,mysql,git,linux,vscode,docker,aws,cloudflare&perline=8" />
+  <img src="https://skillicons.dev/icons?i=python,java,cpp,js,react,nodejs,mongodb,mysql,git,linux,vscode,docker,aws,cloudflare,html,css&perline=8" />
 </p>
 
 ---
@@ -29,7 +33,7 @@
 ## 📊 GitHub Insights:
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=YourUsername&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00ff99&icon_color=00ff99" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YourUsername&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=00ff99" height="170" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YourUsername&theme=radical&hide_border=true&background=0D1117&ring=00FF99&fire=00FF99&currStreakLabel=00FF99" height="170" />
 </p>
 
 ---
@@ -48,7 +52,18 @@
 
 ---
 
-## 🔐 Cyber Quote:
+## ⚡ Animated Hacker Quote:
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=vertical&theme=radical" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Courier+Prime&duration=4000&pause=1000&color=FF0000&center=true&vCenter=true&width=800&lines=“Hack+the+system+before+it+hacks+you...”" alt="Quote Animation" />
 </p>
+
+---
+
+## 👾 Hacker ASCII Logo:
+```text
+███╗   ██╗███████╗██╗   ██╗
+████╗  ██║██╔════╝██║   ██║
+██╔██╗ ██║█████╗  ██║   ██║
+██║╚██╗██║██╔══╝  ██║   ██║
+██║ ╚████║███████╗╚██████╔╝
+╚═╝  ╚═══╝╚══════╝ ╚═════╝
