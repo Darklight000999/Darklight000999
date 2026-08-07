@@ -1,335 +1,431 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" width="1600" height="500">
-  <defs>
-    <!-- Background Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.1"/>
-    </pattern>
+    <defs>
+        <!-- Background Gradient -->
+        <radialGradient id="bg-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#1A1A24" />
+            <stop offset="100%" stop-color="#050507" />
+        </radialGradient>
 
-    <!-- Glowing Filters -->
-    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-    
-    <filter id="ambient-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="60" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+        <!-- RGB Border Gradient -->
+        <linearGradient id="rgb-border" x1="0%" y1="0%" x2="200%" y2="0%">
+            <stop offset="0%" stop-color="#FF5555" />
+            <stop offset="20%" stop-color="#FFB86C" />
+            <stop offset="40%" stop-color="#F1FA8C" />
+            <stop offset="60%" stop-color="#50FA7B" />
+            <stop offset="80%" stop-color="#8BE9FD" />
+            <stop offset="100%" stop-color="#BD93F9" />
+            <animate attributeName="x1" values="0%;-200%" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="x2" values="200%;0%" dur="4s" repeatCount="indefinite" />
+        </linearGradient>
 
-    <filter id="glass-blur">
-      <feGaussianBlur stdDeviation="15" />
-      <feComponentTransfer>
-        <feFuncA type="linear" slope="0.8" />
-      </feComponentTransfer>
-    </filter>
+        <!-- Cyber Username Gradient -->
+        <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF5555" />
+            <stop offset="50%" stop-color="#FF79C6" />
+            <stop offset="100%" stop-color="#8BE9FD" />
+            <animate attributeName="x1" values="0%;100%;0%" dur="6s" repeatCount="indefinite" />
+            <animate attributeName="x2" values="100%;200%;100%" dur="6s" repeatCount="indefinite" />
+        </linearGradient>
 
-    <!-- Gradients -->
-    <linearGradient id="rgb-border" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00FFCC">
-        <animate attributeName="stop-color" values="#00FFCC;#FF2D95;#9D4DFF;#00FFCC" dur="4s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="50%" stop-color="#9D4DFF">
-        <animate attributeName="stop-color" values="#9D4DFF;#00FFCC;#FF2D95;#9D4DFF" dur="4s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stop-color="#FF2D95">
-        <animate attributeName="stop-color" values="#FF2D95;#9D4DFF;#00FFCC;#FF2D95" dur="4s" repeatCount="indefinite" />
-      </stop>
-    </linearGradient>
+        <!-- Glowing Drop Shadow for Terminal -->
+        <filter id="glow-shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feGaussianBlur stdDeviation="20" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
 
-    <!-- Typing Clip Paths -->
-    <clipPath id="clip-line1">
-      <rect x="220" y="100" width="0" height="24">
-        <animate attributeName="width" values="0;0;400;400" keyTimes="0;0.05;0.15;1" dur="14s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
-    <clipPath id="clip-line2">
-      <rect x="220" y="120" width="0" height="24">
-        <animate attributeName="width" values="0;0;400;400" keyTimes="0;0.16;0.26;1" dur="14s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
-    
-    <!-- Progress Bar Width -->
-    <clipPath id="clip-progress">
-      <rect x="220" y="318" width="0" height="12">
-        <animate attributeName="width" values="0;0;10;60;150;240;350;400;400" keyTimes="0;0.45;0.46;0.48;0.51;0.54;0.57;0.6;1" dur="14s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
+        <!-- Text Glow Filter -->
+        <filter id="text-glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+
+        <!-- CRT Noise Pattern -->
+        <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch" />
+            <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.08 0" />
+        </filter>
+
+        <!-- Cyber Grid Pattern -->
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.03" />
+            <path d="M 20 0 L 20 40 M 0 20 L 40 20" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.01" />
+        </pattern>
+
+        <!-- Matrix Binary Rain Pattern -->
+        <pattern id="matrix" width="120" height="240" patternUnits="userSpaceOnUse">
+            <text x="10" y="20" fill="#50FA7B" opacity="0.15" font-family="Menlo, Consolas, monospace" font-size="14" font-weight="bold">
+                <tspan x="10" dy="20">0 1 0 1 1 0</tspan>
+                <tspan x="10" dy="20">1 0 1 0 0 1</tspan>
+                <tspan x="10" dy="20">0 1 1 1 0 0</tspan>
+                <tspan x="10" dy="20">1 0 0 0 1 1</tspan>
+                <tspan x="10" dy="20">1 1 0 1 0 1</tspan>
+                <tspan x="10" dy="20">0 0 1 0 1 0</tspan>
+                <tspan x="10" dy="20">1 0 0 1 1 1</tspan>
+                <tspan x="10" dy="20">0 1 1 0 0 0</tspan>
+                <tspan x="10" dy="20">1 1 1 0 1 0</tspan>
+                <tspan x="10" dy="20">0 0 0 1 0 1</tspan>
+            </text>
+        </pattern>
+
+        <!-- Clip Path for Typing Animation -->
+        <clipPath id="cmd-clip">
+            <rect x="420" y="105" width="0" height="25" class="cmd-clip-rect" />
+        </clipPath>
+
+        <!-- Clip Path for Sequential Boot Lines -->
+        <clipPath id="boot-clip">
+            <rect x="220" y="138" width="1000" height="0" class="boot-clip-rect" />
+        </clipPath>
+
+        <!-- Clip Path for Terminal Bounds -->
+        <clipPath id="terminal-bounds">
+            <rect x="200" y="40" width="1200" height="420" rx="12" />
+        </clipPath>
+    </defs>
 
     <style>
-      /* Base Typography */
-      text {
-        font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
-        font-size: 14px;
-        letter-spacing: 0.5px;
-      }
-      
-      .title {
-        font-weight: bold;
-        font-size: 14px;
-        fill: #FFFFFF;
-      }
+        /* Typography */
+        text {
+            font-family: 'Menlo', 'Consolas', 'Monaco', 'Courier New', monospace;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-      /* Colors */
-      .c-cyan { fill: #00FFCC; }
-      .c-blue { fill: #00E5FF; }
-      .c-pink { fill: #FF2D95; }
-      .c-purple { fill: #9D4DFF; }
-      .c-green { fill: #00FF66; }
-      .c-white { fill: #FFFFFF; }
-      .c-gray { fill: #8892B0; }
-      
-      .bg-primary { fill: #050507; }
-      
-      /* Terminal Styling */
-      .glass-bg {
-        fill: #0c0d14;
-        fill-opacity: 0.85;
-      }
+        /* Master Timeline (24 Seconds Loop) */
+        
+        /* 1. Typing Command */
+        .cmd-clip-rect {
+            animation: type-cmd 24s infinite;
+        }
+        @keyframes type-cmd {
+            0%, 4% { width: 0px; }
+            10%, 100% { width: 260px; } /* 26 chars at ~55ms per char */
+        }
 
-      /* Animations */
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-      .cursor {
-        animation: blink 1s step-end infinite;
-      }
+        /* 2. Boot Sequence Sequential Reveal */
+        .boot-clip-rect {
+            animation: boot-mask 24s infinite;
+        }
+        @keyframes boot-mask {
+            0%, 13% { height: 0px; }
+            13.01%, 13.80% { height: 18px; }
+            13.81%, 14.60% { height: 36px; }
+            14.61%, 15.40% { height: 54px; }
+            15.41%, 16.20% { height: 72px; }
+            16.21%, 17.00% { height: 90px; }
+            17.01%, 17.80% { height: 108px; }
+            17.81%, 18.60% { height: 126px; }
+            18.61%, 19.40% { height: 144px; }
+            19.41%, 20.20% { height: 162px; }
+            20.21%, 21.00% { height: 180px; }
+            21.01%, 21.80% { height: 198px; }
+            21.81%, 22.60% { height: 216px; }
+            22.61%, 23.40% { height: 234px; }
+            23.41%, 24.20% { height: 252px; }
+            24.21%, 25.00% { height: 270px; }
+            25.01%, 100% { height: 280px; }
+        }
 
-      @keyframes pulseGrid {
-        0%, 100% { opacity: 0.15; }
-        50% { opacity: 0.3; }
-      }
-      .grid {
-        animation: pulseGrid 4s ease-in-out infinite;
-      }
+        /* 3. Progress Bar Fill */
+        .prog-bar-fill {
+            animation: prog-width 24s infinite;
+        }
+        @keyframes prog-width {
+            0%, 27% { width: 0px; }
+            38.3%, 100% { width: 600px; }
+        }
 
-      @keyframes scanlineMove {
-        0% { transform: translateY(-500px); }
-        100% { transform: translateY(500px); }
-      }
-      .scanline {
-        animation: scanlineMove 6s linear infinite;
-        fill: rgba(0, 255, 204, 0.05);
-      }
+        /* 4. Progress Percentages Toggles */
+        .pct { opacity: 0; animation: pct-anim 24s infinite; }
+        .p0   { animation-name: p0; }   @keyframes p0   { 27.0%, 28.2% { opacity: 1; } 28.3%, 100% { opacity: 0; } }
+        .p8   { animation-name: p8; }   @keyframes p8   { 28.3%, 29.4% { opacity: 1; } 29.5%, 100% { opacity: 0; } }
+        .p17  { animation-name: p17; }  @keyframes p17  { 29.5%, 30.7% { opacity: 1; } 30.8%, 100% { opacity: 0; } }
+        .p29  { animation-name: p29; }  @keyframes p29  { 30.8%, 31.9% { opacity: 1; } 32.0%, 100% { opacity: 0; } }
+        .p41  { animation-name: p41; }  @keyframes p41  { 32.0%, 33.2% { opacity: 1; } 33.3%, 100% { opacity: 0; } }
+        .p55  { animation-name: p55; }  @keyframes p55  { 33.3%, 34.4% { opacity: 1; } 34.5%, 100% { opacity: 0; } }
+        .p68  { animation-name: p68; }  @keyframes p68  { 34.5%, 35.7% { opacity: 1; } 35.8%, 100% { opacity: 0; } }
+        .p82  { animation-name: p82; }  @keyframes p82  { 35.8%, 36.9% { opacity: 1; } 37.0%, 100% { opacity: 0; } }
+        .p93  { animation-name: p93; }  @keyframes p93  { 37.0%, 38.2% { opacity: 1; } 38.3%, 100% { opacity: 0; } }
+        .p100 { animation-name: p100; } @keyframes p100 { 38.3%, 49.9% { opacity: 1; } 50.0%, 100% { opacity: 0; } }
 
-      @keyframes floatUp {
-        0% { transform: translateY(10px) translateX(0px); opacity: 0; }
-        20% { opacity: 0.8; }
-        80% { opacity: 0.8; }
-        100% { transform: translateY(-500px) translateX(20px); opacity: 0; }
-      }
-      .particle {
-        animation: floatUp 8s infinite linear;
-      }
-      .particle:nth-child(2) { animation-duration: 10s; animation-delay: 2s; }
-      .particle:nth-child(3) { animation-duration: 12s; animation-delay: 1s; }
-      .particle:nth-child(4) { animation-duration: 9s; animation-delay: 4s; }
-      .particle:nth-child(5) { animation-duration: 11s; animation-delay: 0.5s; }
+        /* 5. Stage 1 Hide (Clear Screen) */
+        .stage-1 {
+            animation: s1-hide 24s infinite;
+        }
+        @keyframes s1-hide {
+            0%, 49.9% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
 
-      @keyframes binaryRain {
-        0% { transform: translateY(-100px); opacity: 0; }
-        10% { opacity: 0.5; }
-        90% { opacity: 0.5; }
-        100% { transform: translateY(600px); opacity: 0; }
-      }
-      .binary {
-        font-family: monospace;
-        font-size: 12px;
-        fill: #00FFCC;
-        opacity: 0;
-        animation: binaryRain linear infinite;
-      }
-      .b1 { animation-duration: 5s; animation-delay: 0s; }
-      .b2 { animation-duration: 7s; animation-delay: 1s; }
-      .b3 { animation-duration: 6s; animation-delay: 2s; }
-      .b4 { animation-duration: 8s; animation-delay: 3s; }
-      
-      .step { opacity: 0; animation: appear 14s infinite; }
-      @keyframes appear {
-        0%, 100% { opacity: 0; }
-      }
+        /* 6. Stage 2 Appear (Final Screen) */
+        .f-sys { opacity: 0; animation: f-sys 24s infinite; }
+        @keyframes f-sys { 52%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
 
-      .m1 { animation: stepHold 14s infinite; animation-delay: 3.9s; }
-      .m2 { animation: stepHold 14s infinite; animation-delay: 4.1s; }
-      .m3 { animation: stepHold 14s infinite; animation-delay: 4.3s; }
-      .m4 { animation: stepHold 14s infinite; animation-delay: 4.5s; }
-      .m5 { animation: stepHold 14s infinite; animation-delay: 4.7s; }
-      .m6 { animation: stepHold 14s infinite; animation-delay: 4.9s; }
-      .m7 { animation: stepHold 14s infinite; animation-delay: 5.1s; }
-      .m8 { animation: stepHold 14s infinite; animation-delay: 5.3s; }
-      .m9 { animation: stepHold 14s infinite; animation-delay: 5.5s; }
-      .p-text { animation: stepHold 14s infinite; animation-delay: 6.0s; }
-      .p-bar { animation: stepHold 14s infinite; animation-delay: 6.3s; }
-      
-      .s-online { animation: stepHold 14s infinite; animation-delay: 8.5s; }
-      .s-access { animation: stepHold 14s infinite; animation-delay: 9.0s; }
-      .s-welcome { animation: stepHold 14s infinite; animation-delay: 9.5s; }
-      .s-user { animation: stepHold 14s infinite; animation-delay: 10.0s; }
-      .s-prompt { animation: stepHold 14s infinite; animation-delay: 11.0s; }
+        .f-acc { opacity: 0; animation: f-acc 24s infinite; }
+        @keyframes f-acc { 54%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
 
-      @keyframes stepHold {
-        0% { opacity: 0; }
-        1% { opacity: 1; }
-        100% { opacity: 1; }
-      }
+        .f-wel { opacity: 0; animation: f-wel 24s infinite; }
+        @keyframes f-wel { 56%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
 
-      /* Progress Numbers Overlay Animation */
-      .pn { opacity: 0; animation: progNum 14s infinite; }
-      @keyframes progNum {
-        0%, 100% { opacity: 0; }
-        1% { opacity: 1; }
-        99% { opacity: 1; }
-      }
-      
-      .pn-0 { animation-delay: 6.30s; animation-duration: 0.14s; }
-      .pn-15 { animation-delay: 6.44s; animation-duration: 0.28s; }
-      .pn-35 { animation-delay: 6.72s; animation-duration: 0.42s; }
-      .pn-52 { animation-delay: 7.14s; animation-duration: 0.42s; }
-      .pn-76 { animation-delay: 7.56s; animation-duration: 0.42s; }
-      .pn-91 { animation-delay: 7.98s; animation-duration: 0.42s; }
-      .pn-100 { animation-delay: 8.40s; animation-duration: 5.60s; } 
+        .f-usr { opacity: 0; animation: f-usr 24s infinite; filter: url(#text-glow); }
+        @keyframes f-usr { 58%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
 
-      @keyframes breathe {
-        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(0,255,204,0.2)); }
-        50% { transform: scale(1.002); filter: drop-shadow(0 0 25px rgba(0,255,204,0.4)); }
-      }
-      .terminal-window {
-        transform-origin: center;
-        animation: breathe 6s ease-in-out infinite;
-      }
+        .f-prm { opacity: 0; animation: f-prm 24s infinite; }
+        @keyframes f-prm { 62.5%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
+
+        /* Environmental Animations */
+        .matrix-bg {
+            animation: matrix-fall 15s linear infinite;
+        }
+        @keyframes matrix-fall {
+            from { transform: translateY(-750px); }
+            to { transform: translateY(0px); }
+        }
+
+        .ambient-pulse {
+            animation: pulse-glow 6s ease-in-out infinite alternate;
+        }
+        @keyframes pulse-glow {
+            0% { opacity: 0.1; transform: scale(1); }
+            100% { opacity: 0.3; transform: scale(1.1); }
+        }
+
+        .border-flow {
+            stroke-dasharray: 1000 1640;
+            animation: flow 4s linear infinite;
+        }
+        @keyframes flow {
+            from { stroke-dashoffset: 2640; }
+            to { stroke-dashoffset: 0; }
+        }
+
+        .terminal-breath {
+            animation: breath 8s ease-in-out infinite alternate;
+        }
+        @keyframes breath {
+            0% { filter: drop-shadow(0 0 10px rgba(80, 250, 123, 0.2)); }
+            100% { filter: drop-shadow(0 0 25px rgba(139, 233, 253, 0.4)); }
+        }
+
+        .blink-cursor {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
     </style>
-  </defs>
 
-  <!-- BACKGROUND -->
-  <rect width="1600" height="500" class="bg-primary" />
-  
-  <!-- Ambient Glows -->
-  <circle cx="200" cy="100" r="250" fill="#00FFCC" opacity="0.15" filter="url(#ambient-glow)" />
-  <circle cx="1400" cy="400" r="300" fill="#9D4DFF" opacity="0.15" filter="url(#ambient-glow)" />
-  <circle cx="800" cy="250" r="400" fill="#FF2D95" opacity="0.08" filter="url(#ambient-glow)" />
+    <!-- Base Background -->
+    <rect width="1600" height="500" fill="url(#bg-glow)" />
 
-  <!-- Animated Grid -->
-  <rect width="1600" height="500" fill="url(#grid)" class="grid" />
-
-  <!-- Floating Particles & Binary Rain -->
-  <g>
-    <!-- Binary Rain -->
-    <text x="50" y="0" class="binary b1">0 1 0 0 1</text>
-    <text x="150" y="0" class="binary b2">1 0 1 1 0</text>
-    <text x="1450" y="0" class="binary b3">0 0 1 0 1</text>
-    <text x="1550" y="0" class="binary b4">1 1 0 0 0</text>
-    <text x="1350" y="0" class="binary b1" style="animation-delay: 1.5s;">0 1 1 0 1</text>
-    
-    <!-- Particles -->
-    <circle cx="100" cy="450" r="2" fill="#00FFCC" class="particle" filter="url(#neon-glow)" />
-    <circle cx="300" cy="480" r="3" fill="#FF2D95" class="particle" filter="url(#neon-glow)" />
-    <circle cx="1200" cy="420" r="1.5" fill="#9D4DFF" class="particle" filter="url(#neon-glow)" />
-    <circle cx="1400" cy="460" r="2.5" fill="#00FFCC" class="particle" filter="url(#neon-glow)" />
-    <circle cx="1500" cy="490" r="2" fill="#FF2D95" class="particle" filter="url(#neon-glow)" />
-  </g>
-
-  <!-- Moving Scan Line -->
-  <rect width="1600" height="100" class="scanline" />
-
-  <!-- TERMINAL WINDOW -->
-  <g class="terminal-window">
-    
-    <!-- Glass Backdrop Drop Shadow -->
-    <rect x="230" y="45" width="1140" height="410" rx="12" fill="#000000" opacity="0.6" filter="url(#ambient-glow)" />
-
-    <!-- Animated RGB Border -->
-    <rect x="228" y="43" width="1144" height="414" rx="12" fill="none" stroke="url(#rgb-border)" stroke-width="3" filter="url(#neon-glow)" />
-    
-    <!-- Window Body (Glassmorphism) -->
-    <rect x="230" y="45" width="1140" height="410" rx="10" class="glass-bg" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.1" />
-
-    <!-- Top Title Bar -->
-    <path d="M 230 55 A 10 10 0 0 1 240 45 L 1360 45 A 10 10 0 0 1 1370 55 L 1370 85 L 230 85 Z" fill="#151720" fill-opacity="0.95" />
-    <line x1="230" y1="85" x2="1370" y2="85" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1" />
-
-    <!-- Mac Buttons -->
-    <circle cx="255" cy="65" r="6" fill="#FF5F56" />
-    <circle cx="275" cy="65" r="6" fill="#FFBD2E" />
-    <circle cx="295" cy="65" r="6" fill="#27C93F" />
-
-    <!-- Title Bar Text -->
-    <text x="800" y="70" class="title" text-anchor="middle">root@DarkLight000999: ~</text>
-
-    <!-- TERMINAL CONTENT -->
-    <g transform="translate(10, 15)">
-      
-      <!-- Line 1: Typing -->
-      <g clip-path="url(#clip-line1)">
-        <text x="240" y="105">
-          <tspan class="c-blue">┌──(</tspan><tspan class="c-pink">root㉿DarkLight000999</tspan><tspan class="c-blue">)-[</tspan><tspan class="c-white">~</tspan><tspan class="c-blue">]</tspan>
-        </text>
-      </g>
-      
-      <!-- Line 2: Typing -->
-      <g clip-path="url(#clip-line2)">
-        <text x="240" y="125">
-          <tspan class="c-blue">└─$ </tspan><tspan class="c-white">./system_init.sh --verbose</tspan>
-        </text>
-      </g>
-
-      <!-- Modules Loading -->
-      <g style="font-size: 13px;">
-        <text x="240" y="155" class="m1"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Loading Cyber Security Modules........ </tspan><tspan class="c-green">[ OK ]</tspan></text>
-        <text x="240" y="173" class="m2"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Booting Ethical Hacking Toolkit....... </tspan><tspan class="c-green">[ OK ]</tspan></text>
-        <text x="240" y="191" class="m3"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Initializing Linux Environment........ </tspan><tspan class="c-green">[ OK ]</tspan></text>
-        <text x="240" y="209" class="m4"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Starting Python Automation............ </tspan><tspan class="c-green">[ OK ]</tspan></text>
-        <text x="240" y="227" class="m5"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Syncing OSINT Database................ </tspan><tspan class="c-green">[ OK ]</tspan></text>
-        <text x="240" y="245" class="m6"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Loading Penetration Testing Suite..... </tspan><tspan class="c-green">[ OK ]</tspan></text>
-        <text x="240" y="263" class="m7"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Verifying Secure Network.............. </tspan><tspan class="c-green">[ OK ]</tspan></text>
-        <text x="240" y="281" class="m8"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Hardening Web Applications............ </tspan><tspan class="c-green">[ OK ]</tspan></text>
-        <text x="240" y="299" class="m9"><tspan class="c-green">[+]</tspan> <tspan class="c-gray">Security Research Modules............. </tspan><tspan class="c-green">[ OK ]</tspan></text>
-      </g>
-
-      <!-- Progress Section -->
-      <text x="240" y="325" class="p-text c-white">Progress: </text>
-      
-      <!-- Progress Bar Graphic -->
-      <g class="p-bar" transform="translate(325, 316)">
-        <!-- Track -->
-        <rect x="0" y="0" width="400" height="10" fill="#151720" rx="3" stroke="#FFFFFF" stroke-opacity="0.1" />
-        <!-- Fill (Animated) -->
-        <g clip-path="url(#clip-progress)" transform="translate(-220, -318)">
-          <rect x="220" y="318" width="400" height="10" fill="url(#rgb-border)" rx="3" filter="url(#neon-glow)" />
-          <rect x="220" y="318" width="400" height="10" fill="#00FFCC" rx="3" />
-        </g>
-      </g>
-
-      <!-- Progress Numbers -->
-      <g font-weight="bold" font-size="13px" class="c-cyan" transform="translate(740, 325)">
-        <text class="pn pn-0">0%</text>
-        <text class="pn pn-15">15%</text>
-        <text class="pn pn-35">35%</text>
-        <text class="pn pn-52">52%</text>
-        <text class="pn pn-76">76%</text>
-        <text class="pn pn-91">91%</text>
-        <text class="pn pn-100">100%</text>
-      </g>
-
-      <!-- Final Output Status -->
-      <text x="240" y="355" class="s-online c-green" font-weight="bold">SYSTEM ONLINE</text>
-      <text x="240" y="375" class="s-access c-cyan" font-weight="bold">ACCESS GRANTED</text>
-      <text x="240" y="395" class="s-welcome c-white" font-weight="bold">WELCOME BACK</text>
-      <text x="240" y="415" class="s-user c-pink" font-weight="bold" filter="url(#neon-glow)">DarkLight000999</text>
-
-      <!-- Final Prompt & Blinking Cursor -->
-      <g class="s-prompt">
-        <text x="240" y="445">
-          <tspan class="c-blue">root@DarkLight000999:~$ </tspan>
-          <tspan class="c-cyan cursor" font-weight="bold">_</tspan>
-        </text>
-      </g>
-      
+    <!-- Matrix Binary Rain -->
+    <g class="matrix-bg">
+        <rect width="1600" height="1500" fill="url(#matrix)" />
+        <rect width="1600" height="1500" x="80" y="-300" fill="url(#matrix)" opacity="0.6"/>
+        <rect width="1600" height="1500" x="-50" y="400" fill="url(#matrix)" opacity="0.4"/>
     </g>
-  </g>
+
+    <!-- Cyber Grid -->
+    <rect width="1600" height="500" fill="url(#grid)" />
+
+    <!-- Ambient Floating Orbs -->
+    <circle cx="300" cy="200" r="150" fill="#6272A4" filter="blur(60px)" class="ambient-pulse" style="animation-delay: 0s;" />
+    <circle cx="1300" cy="350" r="200" fill="#8BE9FD" filter="blur(80px)" class="ambient-pulse" style="animation-delay: -2s;" />
+    <circle cx="800" cy="100" r="120" fill="#FF79C6" filter="blur(70px)" class="ambient-pulse" style="animation-delay: -4s;" />
+
+    <!-- Floating Particles -->
+    <circle cx="250" cy="450" r="2" fill="#50FA7B" filter="blur(1px)">
+        <animate attributeName="cy" values="550;-50" dur="12s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.8;0" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1400" cy="400" r="3" fill="#8BE9FD" filter="blur(2px)">
+        <animate attributeName="cy" values="550;-50" dur="18s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.6;0" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="300" r="2" fill="#FF79C6" filter="blur(1px)">
+        <animate attributeName="cy" values="550;-50" dur="15s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="15s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Scanline -->
+    <rect width="1600" height="4" fill="#8BE9FD" opacity="0.1" filter="blur(2px)">
+        <animate attributeName="y" values="-10;510" dur="6s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- TERMINAL WINDOW GROUP -->
+    <g class="terminal-breath">
+        
+        <!-- Terminal Outer Glow & Shadow -->
+        <rect x="195" y="35" width="1210" height="430" rx="15" fill="#05050A" filter="url(#glow-shadow)" opacity="0.5" />
+        
+        <!-- Terminal Base (Glassmorphism) -->
+        <rect x="200" y="40" width="1200" height="420" rx="12" fill="#0A0A10" fill-opacity="0.85" />
+        
+        <!-- Continuous Flowing RGB Border -->
+        <rect x="200" y="40" width="1200" height="420" rx="12" fill="none" stroke="url(#rgb-border)" stroke-width="3" class="border-flow" />
+        
+        <!-- Inner Glass Highlight -->
+        <rect x="201" y="41" width="1198" height="418" rx="11" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1" />
+
+        <!-- Terminal Title Bar -->
+        <path d="M 200 52 A 12 12 0 0 1 212 40 L 1388 40 A 12 12 0 0 1 1400 52 L 1400 75 L 200 75 Z" fill="#151520" fill-opacity="0.95" />
+        <rect x="200" y="75" width="1200" height="1" fill="#FFFFFF" opacity="0.05" />
+        
+        <!-- Mac Style Buttons -->
+        <circle cx="230" cy="57.5" r="6.5" fill="#FF5F56" />
+        <circle cx="255" cy="57.5" r="6.5" fill="#FFBD2E" />
+        <circle cx="280" cy="57.5" r="6.5" fill="#27C93F" />
+        
+        <!-- Title Text -->
+        <text x="800" y="62" fill="#888899" font-size="13" text-anchor="middle" font-weight="bold">root@DarkLight000999:~</text>
+
+        <!-- TERMINAL CONTENT CLIPPING AREA -->
+        <g clip-path="url(#terminal-bounds)">
+            
+            <!-- STAGE 1: Boot Sequence & Progress Bar -->
+            <g class="stage-1">
+                
+                <!-- Initial Prompt -->
+                <text x="230" y="120" font-size="15">
+                    <tspan fill="#50FA7B">root@DarkLight000999</tspan><tspan fill="#F8F8F2">:</tspan><tspan fill="#8BE9FD">~</tspan><tspan fill="#F8F8F2">$ </tspan>
+                </text>
+
+                <!-- Typing Command -->
+                <text x="424" y="120" font-size="15" fill="#F1FA8C" clip-path="url(#cmd-clip)">./system_init.sh --verbose</text>
+                
+                <!-- Boot Sequence Lines (Clipped for sequential reveal) -->
+                <g clip-path="url(#boot-clip)" font-size="14">
+                    
+                    <!-- Line 1 -->
+                    <text x="230" y="152" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Loading Cyber Security Modules</tspan><tspan fill="#6272A4">..............</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 2 -->
+                    <text x="230" y="170" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Booting Ethical Hacking Toolkit</tspan><tspan fill="#6272A4">.............</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 3 -->
+                    <text x="230" y="188" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Initializing Linux Environment</tspan><tspan fill="#6272A4">..............</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 4 -->
+                    <text x="230" y="206" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Starting Python Automation</tspan><tspan fill="#6272A4">..................</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 5 -->
+                    <text x="230" y="224" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Loading AI Engine</tspan><tspan fill="#6272A4">...........................</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 6 -->
+                    <text x="230" y="242" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Syncing OSINT Database</tspan><tspan fill="#6272A4">......................</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 7 -->
+                    <text x="230" y="260" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Starting Recon Framework</tspan><tspan fill="#6272A4">....................</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 8 -->
+                    <text x="230" y="278" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Loading Penetration Testing Suite</tspan><tspan fill="#6272A4">...........</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 9 -->
+                    <text x="230" y="296" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Verifying Secure Network</tspan><tspan fill="#6272A4">....................</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 10 -->
+                    <text x="230" y="314" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Hardening Web Applications</tspan><tspan fill="#6272A4">..................</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 11 -->
+                    <text x="230" y="332" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Security Research Modules</tspan><tspan fill="#6272A4">...................</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 12 -->
+                    <text x="230" y="350" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Initializing Zero Trust Layer</tspan><tspan fill="#6272A4">...............</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 13 -->
+                    <text x="230" y="368" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Loading Digital Forensics Toolkit</tspan><tspan fill="#6272A4">...........</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 14 -->
+                    <text x="230" y="386" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Enabling Threat Intelligence</tspan><tspan fill="#6272A4">................</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                    
+                    <!-- Line 15 -->
+                    <text x="230" y="404" dominant-baseline="hanging">
+                        <tspan fill="#50FA7B">[+]</tspan> <tspan fill="#F8F8F2">Finalizing Secure Environment</tspan><tspan fill="#6272A4">...............</tspan>
+                        <tspan x="680" fill="#50FA7B">[ OK ]</tspan>
+                    </text>
+                </g>
+
+                <!-- Progress Bar Section -->
+                <g class="pct p0" transform="translate(0,0)">
+                    <text x="230" y="445" font-size="14" fill="#F8F8F2">SYSTEM INITIALIZATION PROGRESS:</text>
+                    <rect x="495" y="435" width="604" height="12" fill="none" stroke="#6272A4" stroke-width="1.5" rx="3" />
+                    <rect x="497" y="437" height="8" fill="#50FA7B" rx="2" class="prog-bar-fill" filter="url(#text-glow)" />
+                </g>
+                
+                <!-- Overlay Percentages -->
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p0" font-weight="bold">[ 0% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p8" font-weight="bold">[ 8% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p17" font-weight="bold">[ 17% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p29" font-weight="bold">[ 29% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p41" font-weight="bold">[ 41% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p55" font-weight="bold">[ 55% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p68" font-weight="bold">[ 68% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p82" font-weight="bold">[ 82% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p93" font-weight="bold">[ 93% ]</text>
+                <text x="1115" y="445" font-size="14" fill="#50FA7B" class="pct p100" font-weight="bold">[ 100% ]</text>
+            </g>
+
+            <!-- STAGE 2: Final Display Screen -->
+            <g text-anchor="middle">
+                <text x="800" y="180" font-size="42" fill="#8BE9FD" font-weight="bold" letter-spacing="8" class="f-sys">SYSTEM ONLINE</text>
+                <text x="800" y="240" font-size="32" fill="#50FA7B" font-weight="bold" letter-spacing="4" class="f-acc">ACCESS GRANTED</text>
+                <text x="800" y="320" font-size="20" fill="#F8F8F2" letter-spacing="2" class="f-wel">WELCOME BACK</text>
+                <text x="800" y="380" font-size="46" fill="url(#cyber-grad)" font-weight="bold" class="f-usr">DarkLight000999</text>
+            </g>
+            
+            <g class="f-prm">
+                <text x="230" y="435" font-size="15">
+                    <tspan fill="#50FA7B">root@DarkLight000999</tspan><tspan fill="#F8F8F2">:</tspan><tspan fill="#8BE9FD">~</tspan><tspan fill="#F8F8F2">$ </tspan>
+                    <tspan fill="#F8F8F2" class="blink-cursor">█</tspan>
+                </text>
+            </g>
+            
+        </g>
+    </g>
+
+    <!-- CRT Noise Overlay -->
+    <rect width="1600" height="500" style="pointer-events:none;" filter="url(#noise)" opacity="0.35" />
 </svg>
