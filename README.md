@@ -6,7 +6,6 @@
 width="100%"
 style="display:block;margin:0;padding:0;" />
 
-
 <img src="./assets/terminal.svg"
 width="100%"
 style="display:block;margin:0;padding:0;" />
