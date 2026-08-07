@@ -2,36 +2,74 @@
   <img src="./assets/header.svg" width="100%" />
 </p>
 <!-- ===================================================== -->
-<!--               CYBER TERMINAL INTRO                    -->
+<!--                 CYBER TERMINAL INTRO                  -->
 <!-- ===================================================== -->
 
-<div align="center">
+<p align="center">
+  <img src="./assets/header.svg" width="100%" alt="DarkLight000999 Cyber Security Banner">
+</p>
 
-```text
-┌──────────────────────────────────────────────────────────────┐
-│ > Initializing DarkLight000999                              │
-│ > Loading Cyber Security Modules...                         │
-│ > Loading Ethical Hacking Toolkit...                        │
-│ > Loading Linux Environment...                              │
-│ > Loading Python Automation...                              │
-│ > Loading OSINT Database...                                 │
-│ > Loading Web Application Security...                       │
-│ > Status : ████████████████████████ 100%                    │
-│ > Access Granted ✔                                          │
-└──────────────────────────────────────────────────────────────┘
+<p align="center">
+
+```bash
+┌──(root㉿DarkLight000999)-[~]
+└─$ ./system_init.sh --verbose
+
+[+] Loading Cyber Security Modules........ [ OK ]
+[+] Booting Ethical Hacking Toolkit....... [ OK ]
+[+] Mounting Linux Environment............ [ OK ]
+[+] Initiating Python Automation.......... [ OK ]
+[+] Syncing OSINT Databases............... [ OK ]
+[+] Hardening Web Application Security.... [ OK ]
+[+] Initializing Penetration Testing...... [ OK ]
+[+] Verifying Secure Environment.......... [ OK ]
+
+[████████████████████████████████████████] 100%
+
+>> SYSTEM ONLINE
+>> ACCESS GRANTED
+>> WELCOME, DarkLight000999
 ```
 
-</div>
+</p>
 
-<div align="center">
+<p align="center">
+  <a href="https://github.com/DarkLight000999">
+    <img
+      src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1000&color=00FFCC&center=true&vCenter=true&width=900&lines=%3E_+Welcome+to+DarkLight000999's+Terminal;%3E_+Cyber+Security+Professional;%3E_+Ethical+Hacker+%26+Penetration+Tester;%3E_+Linux+Power+User+%7C+OSINT+Researcher;%3E_+Python+Automation+Developer;%3E_+Always+Learning+%7C+Always+Building"
+      alt="Typing SVG">
+  </a>
+</p>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&pause=700&duration=2200&color=FFFFFF&center=true&vCenter=true&width=1000&lines=Welcome+to+DarkLight000999;Cyber+Security+Professional;Ethical+Hacker;Security+Researcher;Penetration+Tester;Linux+Power+User;OSINT+Researcher;Python+Automation;Always+Learning+Always+Building"/>
+<!-- ===================================================== -->
+<!--                    TECH STACK                         -->
+<!-- ===================================================== -->
 
-</div>
+<p align="center">
+
+<img src="https://img.shields.io/badge/Kali%20Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white" alt="Kali Linux"/>
+
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+
+<img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/>
+
+<img src="https://img.shields.io/badge/Cyber%20Security-000000?style=for-the-badge&logo=hackthebox&logoColor=9FEF00" alt="Cyber Security"/>
+
+<img src="https://img.shields.io/badge/Ethical%20Hacking-111111?style=for-the-badge&logo=proton&logoColor=00FFCC" alt="Ethical Hacking"/>
+
+<img src="https://img.shields.io/badge/OSINT-8A2BE2?style=for-the-badge&logo=google&logoColor=white" alt="OSINT"/>
+
+<img src="https://img.shields.io/badge/Penetration%20Testing-CC0000?style=for-the-badge&logo=owasp&logoColor=white" alt="Penetration Testing"/>
+
+</p>
 
 ---
 
-<div align="center">
+<p align="center">
+<i>"Hack to Secure • Learn to Protect • Build with Purpose"</i>
+</p>
 
 # ⚡ WHO AM I
 
