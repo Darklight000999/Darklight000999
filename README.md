@@ -5,19 +5,6 @@
 <img src="./assets/header.svg"
 width="100%"
 style="display:block;margin:0;padding:0;" />
-
-<text
- x="800"
- y="70"
- text-anchor="middle"
- font-family="monospace"
- font-size="28"
- font-weight="bold"
- fill="url(#rgb-border)"
- filter="url(#neon-glow)">
- TERMINAL
-</text>
-
 <img src="./assets/terminal.svg"
 width="100%"
 style="display:block;margin:0;padding:0;" />
