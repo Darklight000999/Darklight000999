@@ -17,61 +17,9 @@ style="display:block;margin:0;padding:0;" />
 root@DarkLight000999:~$
 ./system_init.sh --verbose
 
-<p align="center">
-  <a href="https://github.com/DarkLight000999">
-    <img
-      src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1000&color=00FFCC&center=true&vCenter=true&width=900&lines=%3E_+Welcome+to+DarkLight000999's+Terminal;%3E_+Cyber+Security+Professional;%3E_+Ethical+Hacker+%26+Penetration+Tester;%3E_+Linux+Power+User+%7C+OSINT+Researcher;%3E_+Python+Automation+Developer;%3E_+Always+Learning+%7C+Always+Building"
-      alt="Typing SVG">
-  </a>
-</p>
-
-<!-- ===================================================== -->
-<!--                    TECH STACK                         -->
-<!-- ===================================================== -->
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/Kali%20Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white" alt="Kali Linux"/>
-
-<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-
-<img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/>
-
-<img src="https://img.shields.io/badge/Cyber%20Security-000000?style=for-the-badge&logo=hackthebox&logoColor=9FEF00" alt="Cyber Security"/>
-
-<img src="https://img.shields.io/badge/Ethical%20Hacking-111111?style=for-the-badge&logo=proton&logoColor=00FFCC" alt="Ethical Hacking"/>
-
-<img src="https://img.shields.io/badge/OSINT-8A2BE2?style=for-the-badge&logo=google&logoColor=white" alt="OSINT"/>
-
-<img src="https://img.shields.io/badge/Penetration%20Testing-CC0000?style=for-the-badge&logo=owasp&logoColor=white" alt="Penetration Testing"/>
-
 </p>
 
 ---
-
-<p align="center">
-<i>"Hack to Secure • Learn to Protect • Build with Purpose"</i>
-</p>
-
-# ⚡ WHO AM I
-
-```yaml
-Name        : DarkLight000999
-Role        : Cyber Security Professional
-Focus       : Ethical Hacking
-Learning    : Advanced Security Research
-OS          : Linux
-Languages   : Python | Bash | JavaScript
-Mindset     : Learn • Build • Secure
-Status      : ACTIVE
-```
-
-</div>
-<!-- ===================================================== -->
-<!--               TECH STACK & SKILLS                      -->
-<!-- ===================================================== -->
 
 <h2 align="center">⚡ Tech Stack & Skills</h2>
 
