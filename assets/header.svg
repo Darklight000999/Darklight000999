@@ -1,4 +1,9 @@
-<svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" viewBox="0 0 1600 520" width="1600" height="520">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 1600 520"
+    width="1600"
+    height="520"> viewBox="0 0 1600 520" width="1600" height="520">
 <defs>
 <style>
 @keyframes scan {
