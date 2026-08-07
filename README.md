@@ -13,10 +13,6 @@ style="display:block;margin:0;padding:0;" />
 
 </div>
 
-
-<br>
-
-
 <!-- TERMINAL COMMAND PREVIEW -->
 
 ```bash
