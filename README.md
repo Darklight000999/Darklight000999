@@ -8,6 +8,10 @@
 
 <p align="center">
 
+<p align="center">
+  <img src="./assets/terminal.svg" width="100%" alt="Animated Cyber Terminal">
+</p>
+
 ```bash
 ┌──(root㉿DarkLight000999)-[~]
 └─$ ./system_init.sh --verbose
