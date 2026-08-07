@@ -1,38 +1,27 @@
-<!-- ===================================================== -->
-<!--                 CYBER TERMINAL INTRO                  -->
-<!-- ===================================================== -->
+<!-- CYBER SECURITY HEADER -->
 
-<p align="center">
-  <img src="./assets/header.svg" width="100%" alt="DarkLight000999 Cyber Security Banner">
-</p>
+<div align="center">
 
-<p align="center">
+<img src="./assets/header.svg"
+width="100%"
+style="display:block;margin:0;padding:0;" />
 
-<p align="center">
-  <img src="./assets/terminal.svg" width="100%" alt="Animated Cyber Terminal">
-</p>
+
+<img src="./assets/terminal.svg"
+width="100%"
+style="display:block;margin:0;padding:0;" />
+
+</div>
+
+
+<br>
+
+
+<!-- TERMINAL COMMAND PREVIEW -->
 
 ```bash
-┌──(root㉿DarkLight000999)-[~]
-└─$ ./system_init.sh --verbose
-
-[+] Loading Cyber Security Modules........ [ OK ]
-[+] Booting Ethical Hacking Toolkit....... [ OK ]
-[+] Mounting Linux Environment............ [ OK ]
-[+] Initiating Python Automation.......... [ OK ]
-[+] Syncing OSINT Databases............... [ OK ]
-[+] Hardening Web Application Security.... [ OK ]
-[+] Initializing Penetration Testing...... [ OK ]
-[+] Verifying Secure Environment.......... [ OK ]
-
-[████████████████████████████████████████] 100%
-
->> SYSTEM ONLINE
->> ACCESS GRANTED
->> WELCOME, DarkLight000999
-```
-
-</p>
+root@DarkLight000999:~$
+./system_init.sh --verbose
 
 <p align="center">
   <a href="https://github.com/DarkLight000999">
