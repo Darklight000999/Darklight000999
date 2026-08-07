@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header_v3.svg" width="100%" alt="DarkLight000999 Header">
+  <img src="./assets/header_v3.svg" width="100%" alt="assets/header.svg">
 </p>
 
 <!-- ===================================================== -->
