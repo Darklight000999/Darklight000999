@@ -1,7 +1,10 @@
 <p align="center">
   <img src="./assets/header.svg" width="100%" alt="DarkLight000999 Header">
 </p>
-
+<p align="center">
+  <img src="./assets/terminal.svg" width="100%" alt="DarkLight000999 Header">
+</p>
+<!-- बाकी README नीचे -->
 <!-- ===================================================== -->
 <!--             PREMIUM PROFILE DASHBOARD                 -->
 <!-- ===================================================== -->
